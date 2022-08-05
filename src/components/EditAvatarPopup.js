@@ -22,7 +22,7 @@ function EditAvatarPopup({ isOpen, onClose, onUpdateAvatar }) {
       onSubmit={handleSubmit}
     >
       <input
-        name="link"
+        name="edit-avatar"
         className="popup__input popup__input-avatar"
         id="edit-avatar"
         placeholder="Ссылка на картинку"

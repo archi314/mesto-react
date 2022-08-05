@@ -31,7 +31,7 @@ function AddPlacePopup({ isOpen, onClose, onAddPlace }) {
 
   return (
     <PopupWithForm
-      name="add"
+      name="place"
       title="Новое место"
       buttonText="Сохранить"
       isOpen={isOpen}
@@ -39,7 +39,7 @@ function AddPlacePopup({ isOpen, onClose, onAddPlace }) {
       onSubmit={handleSubmit}
     >
       <input
-        name="name"
+        name="place-name"
         className="popup__input popup__input-name"
         id="name"
         placeholder="Название"
@@ -54,7 +54,7 @@ function AddPlacePopup({ isOpen, onClose, onAddPlace }) {
       <span className="popup__error name-error" id="name-error" />
 
       <input
-        name="link"
+        name="place-link"
         className="popup__input popup__input_status popup__input-description"
         id="link"
         placeholder="Ссылка на картинку"

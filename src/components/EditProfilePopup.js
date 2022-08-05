@@ -42,7 +42,7 @@ function EditProfilePopup({ isOpen, onClose, onUpdateUser }) {
       onSubmit={handleSubmit}
     >
       <input
-        name="name"
+        name="profile-name"
         className="popup__input popup__input-name"
         id="input_name"
         placeholder="Имя"
@@ -57,7 +57,7 @@ function EditProfilePopup({ isOpen, onClose, onUpdateUser }) {
       <span className="popup__error title-error" id="title-error" />
 
       <input
-        name="about"
+        name="profile-about"
         className="popup__input popup__input_status popup__input-description"
         id="input_about"
         placeholder="Профессия"
