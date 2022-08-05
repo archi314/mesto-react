@@ -17,15 +17,12 @@ const PopupWithForm = (props) => {
         ></button>
         <h2 className="popup__title">{props.title}</h2>
         <form
-          name={props.form}
-          method="post"
           className="popup__form"
           onSubmit={props.onSubmit}
           noValidate
         >
           {props.children}
           <button
-            name="popup-submit"
             type="submit"
             className="popup__button"
             title="Сохранить"

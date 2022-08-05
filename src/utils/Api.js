@@ -38,7 +38,7 @@ export class Api {
     return fetch(`${this._url}/users/me`, {
       method: "PATCH",
       headers: this._headers,
-      body: JSON.stringify({ name: data.title, about: data.status }),
+      body: JSON.stringify({ name: data.name, about: data.about }),
     }).then(this._checkResponse);
   }
 
@@ -58,7 +58,7 @@ export class Api {
   /** Удаления карточки. */
 
   removeCard(data) {
-    return fetch(`${this._url}/cards/${data._id}`, {
+    return fetch(`${this._url}/cards/${data}`, {
       method: "DELETE",
       headers: this._headers,
     }).then(this._checkResponse);
@@ -67,14 +67,14 @@ export class Api {
   /** Постановка и снятие лайка. */
 
   setLike(data) {
-    return fetch(`${this._url}/cards/${data._id}/likes`, {
+    return fetch(`${this._url}/cards/${data}/likes`, {
       method: "PUT",
       headers: this._headers,
     }).then(this._checkResponse);
   }
 
   removeLike(data) {
-    return fetch(`${this._url}/cards/${data._id}/likes`, {
+    return fetch(`${this._url}/cards/${data}/likes`, {
       method: "DELETE",
       headers: this._headers,
     }).then(this._checkResponse);
@@ -82,11 +82,11 @@ export class Api {
 
   /** Обновление аватара пользователя. */
 
-  updateUserAvatar(item) {
+  updateUserAvatar(data) {
     return fetch(`${this._url}/users/me/avatar`, {
       method: "PATCH",
       headers: this._headers,
-      body: JSON.stringify({ avatar: item["edit-avatar"] }),
+      body: JSON.stringify({ avatar: data.avatar }),
     }).then(this._checkResponse);
   }
 }

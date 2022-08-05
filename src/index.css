@@ -29,6 +29,8 @@
 @import url('./blocks/element/__heart-icon/element__heart-icon.css');
 @import url('./blocks/element/__heart-icon/_active/element__heart-icon_active.css');
 @import url('./blocks/element/__busket_icon/element__busket-icon.css');
+@import url('./blocks/element/__busket_icon/_visible/element__busket-icon_visible.css');
+@import url('./blocks/element/__busket_icon/_hidden/element__busket-icon_hidden.css');
 
 @import url('./blocks/footer/footer.css');
 @import url('./blocks/footer/__copyright/footer__copyright.css');
